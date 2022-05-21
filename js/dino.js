@@ -4,7 +4,7 @@ import {
   incrementCustomProperty,
 } from "./updateCustomProperty.js";
 const JUMP_SPEED = 0.45,
-  GRAVITY = 0.0015,
+  GRAVITY = 0.002,
   DINO_FRAME_COUNT = 2,
   FRAME_TIME = 100,
   dinoElement = document.querySelector("[data-dino]");
