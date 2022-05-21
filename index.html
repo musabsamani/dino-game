@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="XU-A-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <title>dinasor</title>
+  </head>
+  <style>
+    *,
+    *::after,
+    *::before {
+      user-select: none;
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .world {
+      overflow: hidden;
+      position: relative;
+    }
+    .score {
+      position: absolute;
+      font-size: 3vmin;
+      top: 1vmin;
+      right: 1vmin;
+    }
+    .start-screen {
+      position: absolute;
+      font-size: 5vmin;
+      text-transform: capitalize;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+    .hide {
+      display: none;
+    }
+    .ground {
+      --left: 0;
+      position: absolute;
+      bottom: 0;
+      width: 300%;
+      left: calc(var(--left) * 1%);
+    }
+    .dino {
+      --bottom: 0;
+      position: absolute;
+      left: 1%;
+      height: 30%;
+      bottom: calc(var(--bottom) * 1%);
+    }
+    .cactus {
+      position: absolute;
+      left: calc(var(--left) * 1%);
+      height: 30%;
+      bottom: 0;
+    }
+  </style>
+  <script src="js/index.js" type="module"></script>
+  <body>
+    <div class="world" data-world>
+      <div class="score" data-score>0</div>
+      <div class="start-screen" data-start-screen>Tap any where to start</div>
+      <img src="img/ground.png" alt="" class="ground" data-ground />
+      <img src="img/ground.png" alt="" class="ground" data-ground />
+      <img src="img/dino-stationary.png" alt="" class="dino" data-dino />
+    </div>
+  </body>
+</html>
